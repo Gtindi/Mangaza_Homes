@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+
+.button
+    {
+      width: 150px;
+      padding: 10px;
+      background-color: #FF8C00;
+      box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2);
+      font-weight:bold;
+      text-decoration:none;
+    }
+    #cover{
+      position: sticky;
+      top:0;
+      left:0;
+      background:white;
+      z-index:5;
+      width:100%;
+      display:none;
+    }
+    #loginScreen
+    {
+      margin:0 auto;
+      position:relative;
+      z-index:10;
+      display:none;
+    }
+    #loginScreen:target, #loginScreen:target + #cover{
+      display:block;
+      opacity:2;
+    }
+    .cancel
+    {
+      display:block;
+      position:absolute;
+      top:3px;
+      right:2px;
+      background:rgb(245,245,245);
+      color:black;
+      height:30px;
+      width:35px;
+      font-size:30px;
+      text-decoration:none;
+      align-items: baseline;
+      text-align:center;
+      font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<div align="center">
+  <br><br><br><br>
+  <a href="#loginScreen" class="button">Click here to Log In</a>
+  </div>
+  <div id="loginScreen">
+  <a href="#" class="cancel">×</a>
+  </div>
+  <div id="cover" >
+  <!-- Header -->
+<div class="header" id="myHeader">
+  <p>Click on the buttons to change the grid view.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="three()">3</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="/static/img/king/king.jpg" style="width:100%">
+    <img src="/static/img/king/king.jpg" style="width:100%">
+
+  </div>
+  <div class="column">
+    <img src="/static/img/king/IMG-20210405-WA0072.jpg" style="width:100%">
+    <img src="/static/img/king/IMG-20210405-WA0072.jpg" style="width:100%">
+
+  </div>  
+  <div class="column">
+    <img src="/static/img/king/IMG-20210409-WA0014.jpg" style="width:100%">
+    <img src="/static/img/king/IMG-20210409-WA0014.jpg" style="width:100%">
+
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function three() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+  </div>
+
+</body>
+</html>

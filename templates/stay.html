@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mangaza Homes</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="/static/img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+        <!-- Template Stylesheet -->
+        <link href="/static/css/style.css" rel="stylesheet">
+        <style>
+            * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50px; /* IE 10 */
+  flex: 50px;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #fba500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  right: 28px;
+  width: 280px;
+  border-radius: 5px;
+}
+.open-button:hover{
+    background-color: transparent;
+    color: #fba500;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  color: white;
+  padding-top: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #e13100;
+  height: 35px;
+}
+.form-container .cancel:hover{
+    background-color: transparent;
+    color: #e13100;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/*------promo-----*/
+#promo
+{
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/static/img/king/king.jpg);
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+    height:450px;
+	background-attachment: fixed;
+	text-align: center;
+	padding: 100px;
+	font-family: sans-serif;
+	font-size: 38px;
+}
+#promo p{
+    padding-top: 100px;
+    color: white;
+}
+/**********Anime**********/
+.ml7 {
+  position: relative;
+  font-weight: 900;
+  /* font-size: 3.7em; */
+  color: white;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 100px;
+  padding-right: 0.05px;
+  padding-bottom: 0.1px;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 5px;
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+}
+@media(max-width: 575.98px) {
+    .ml7 .letter {
+        font-size:18px;
+    }
+    .ml7 .text-wrapper {
+        padding-top: 0px;
+    }
+    #promo{
+        height:250px;
+    }
+
+}
+/* Border */
+div.double {border-style: double;border-radius: 5px;}
+
+.button
+    {
+      width: 150px;
+      padding: 10px;
+      background-color: #FF8C00;
+      box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2);
+      font-weight:bold;
+      text-decoration:none;
+    }
+    #cover{
+      position: sticky;
+      top:0;
+      left:0;
+      background:white;
+      z-index:5;
+      width:100%;
+      display:none;
+    }
+    #loginScreen
+    {
+      margin:0 auto;
+      position:relative;
+      z-index:10;
+      display:none;
+    }
+    #loginScreen:target, #loginScreen:target + #cover{
+      display:block;
+      opacity:2;
+    }
+    .cancel
+    {
+      display:block;
+      position:fixed;
+      top:3px;
+      right:2px;
+      background:rgb(245,245,245);
+      color:black;
+      height:30px;
+      width:35px;
+      font-size:30px;
+      text-decoration:none;
+      align-items: baseline;
+      text-align:center;
+      font-weight:bold;
+    }
+ </style>
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Mangaza <span>Homes</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
+                        <a href="{% url 'vacation' %}" class="nav-item nav-link">Vacation</a>
+                        <!-- <a href="{% url 'feature' %}" class="nav-item nav-link">Feature</a> -->
+                        <!-- <a href="{% url 'team' %}" class="nav-item nav-link">Chef</a> -->
+                        <!-- <a href="{% url 'menu' %}" class="nav-item nav-link">Menu</a> -->
+                        <!-- <a href="{% url 'booking' %}" class="nav-item nav-link active">Booking</a> -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="{% url 'blog' %}" class="dropdown-item">Blog Grid</a>
+                                <a href="{% url 'single' %}" class="dropdown-item">Blog Detail</a>
+                            </div>
+                        </div>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        	<!----promo---->
+<section id="promo">
+    <div class="container">	    
+        <h1 class="ml7">
+            <span class="text-wrapper">
+              <span class="letters">
+                <p>Welcome to Kings Distinction</p>
+              </span>
+            </span>
+          </h1>
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </div>
+    </section>
+    <script>
+        // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml7 .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml7',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 10000
+  });
+    </script>
+        <!-- Page Header End -->
+
+  <!-- Photo Grid -->
+  <div class="row" style="margin-top: 0px;"> 
+    <div class="column">
+      <img src="/static/img/king/king.jpg" style="width:100%">
+      <!-- <img src="/static/img/king/IMG-20210405-WA0065.jpg" style="width:100%"> -->    
+    </div>
+    <div class="column">
+        <img src="/static/img/king/IMG-20210405-WA0072.jpg" style="width:100%">
+        <!-- <img src="/static/img/king/IMG-20210405-WA0072.jpg" style="width:100%"> -->
+    </div>  
+    <div class="column">
+        <img src="/static/img/king/IMG-20210409-WA0014.jpg" style="width:100%">
+        <!-- <img src="/static/img/king/IMG-20210409-WA0006.jpg" style="width:100%"> -->
+    </div>
+    <div class="column">
+      <img src="/static/img/king/IMG-20210405-WA0089.jpg" style="width:100%">
+      <!-- <img src="/static/img/king/IMG-20210405-WA0083.jpg" style="width:100%"> -->
+    </div>
+  </div>
+  
+  <script>
+  // Get the elements with class="column"
+  var elements = document.getElementsByClassName("column");
+  
+  // Declare a loop variable
+  var i;
+  
+  // Full-width images
+  function one() {
+      for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "100%";  // IE10
+      elements[i].style.flex = "100%";
+    }
+  }
+  
+  // Two images side by side
+  function two() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "50%";  // IE10
+      elements[i].style.flex = "50%";
+    }
+  }
+  
+  // Four images side by side
+  function four() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "25%";  // IE10
+      elements[i].style.flex = "25%";
+    }
+  }
+  
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myHeader");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+        <!-- /photoGrid -->
+
+        <!-----More Images--->
+            <div>
+            <br><br><br><br>
+            <a href="#loginScreen" class="button" style="margin-top: 0;">More Images</a>
+            </div>
+            <div id="loginScreen">
+            <a href="#" class="cancel">×</a>
+
+             <!-- Header -->
+          <div class="header" id="myHeader">
+            <p>Kings Distinction Images</p>
+            
+          </div>
+          
+          <!-- Photo Grid -->
+          <div class="row"> 
+            <div class="column">
+              <img src="/static/img/king/king.jpg" style="width:100%">
+              <img src="/static/img/king/king.jpg" style="width:100%">
+          
+            </div>
+            <div class="column">
+              <img src="/static/img/king/IMG-20210405-WA0072.jpg" style="width:100%">
+              <img src="/static/img/king/IMG-20210405-WA0072.jpg" style="width:100%">
+          
+            </div>  
+            <div class="column">
+              <img src="/static/img/king/IMG-20210409-WA0014.jpg" style="width:100%">
+              <img src="/static/img/king/IMG-20210409-WA0014.jpg" style="width:100%">
+          
+            </div>
+          </div>
+          
+          <script>
+          // Get the elements with class="column"
+          var elements = document.getElementsByClassName("column");
+          
+          // Declare a loop variable
+          var i;
+          
+          // Full-width images
+          function one() {
+              for (i = 0; i < elements.length; i++) {
+              elements[i].style.msFlex = "100%";  // IE10
+              elements[i].style.flex = "100%";
+            }
+          }
+          
+          // Two images side by side
+          function two() {
+            for (i = 0; i < elements.length; i++) {
+              elements[i].style.msFlex = "50%";  // IE10
+              elements[i].style.flex = "50%";
+            }
+          }
+          
+          // Four images side by side
+          function three() {
+            for (i = 0; i < elements.length; i++) {
+              elements[i].style.msFlex = "25%";  // IE10
+              elements[i].style.flex = "25%";
+            }
+          }
+          
+          // Add active class to the current button (highlight it)
+          var header = document.getElementById("myHeader");
+          var btns = header.getElementsByClassName("btn");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+              var current = document.getElementsByClassName("active");
+              current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+            });
+          }
+          </script>
+          
+            </div>
+        <!-----/More Images--->
+
+
+        <!-- Price Start -->
+        <div class="booking">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="booking-content" style="color:black">
+                            <div class="double">
+                            <b style="color: black;">Entire unit hosted by Garreth</b> <br>
+                            <hr style="background-color: black;">
+                            <p style="color: black;">4 guest . 2 bedrooms . 2 beds . 2 baths<br></p>
+                            </div>
+                            <b>What this place Offers</b><br>
+                            <i class="fas fa-home" style="color: #fb5b00; padding-right:10px;"></i></i>Entire home to yourself<br>
+                            <i class="fas fa-wifi" style="color: #0081fb; padding-right:10px;"></i>Free WiFi Available<br>
+                            <!-- <i class="fas fa-hands-wash"></i>Committed to Enhanced Clean<br> -->
+                                                        
+                            <i class="fas fa-utensils" style="color: #63fb00; padding-right:10px;"></i>Kitchen<br>
+                            
+                            <!-- pop up page from this button -->
+                            <button class="open-button" onclick="openForm()">More Amenities</button>
+
+                            <div class="form-popup" id="myForm">
+                            <form action="/action_page.php" class="form-container">
+                            <i class="fas fa-parking" style="color: #fb5b00; padding-right:10px;"></i>Free Parking Space<br>
+                            <i class="fas fa-tv" style="padding-right:10px;"></i>TV<br>
+                            <i class="fas fa-swimmer" style="color: #0081fb; padding-right:10px;"></i>Pool<br>
+                            <i class="fas fa-dice" style="color: #63fb00; padding-right:10px;"></i>Board Games<br>
+                                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                            </form>
+                            </div>
+
+                            <script>
+                            function openForm() {
+                            document.getElementById("myForm").style.display = "block";
+                            }
+
+                            function closeForm() {
+                            document.getElementById("myForm").style.display = "none";
+                            }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="booking-form">
+                            <form>
+                                <center><h7><b>Ksh.9,000 </b>/ night</h7></center>                             
+                                <div>
+                                    <button class="btn custom-btn" type="submit">
+                                        <a href="https://api.whatsapp.com/send?phone=254714918357">
+                                            <i class="fas fa-phone-alt"></i>
+                                            Contact For Availability
+                                        </a>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Price End -->
+        <!-- Location of the Place -->
+    <div class="contact" style="padding-top: 5px;">
+     <div class="container">
+      <div class="row contact-form" style="color: black;">
+          <b><h7><u>Where you'll be</u></h7></b> <br>
+         <div style="width: 100%">
+            <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Garden%20City,%20Nairobi+(Mangaza%20Homes)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0">
+            </iframe>
+            <!-- <a href="https://www.maps.ie/draw-radius-circle-map/">Circle area map</a> -->
+         </div>
+      </div>
+     </div>
+    </div>
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-contact">
+                                    <h2>Our Address</h2>
+                                    <p><i class="fa fa-map-marker-alt"></i>Nairobi, Kenya</p>
+                                    <p><i class="fa fa-phone-alt"></i>+2547136191690</p>
+                                    <p><i class="fa fa-envelope"></i>info@mangazahomes.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Quick Links</h2>
+                                    <a href="">Terms of use</a>
+                                    <a href="">Privacy policy</a>
+                                    <a href="">Cookies</a>
+                                    <a href="">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                            </p>
+                            <div class="form">
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn custom-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>Copyright &copy; <a href="#">Mangaza Homes</a>, All Right Reserved.</p>
+                    <p>Designed By <a href="https://drogatechnology.web.app/">Droga Tech</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/lib/easing/easing.min.js"></script>
+        <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/static/mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
